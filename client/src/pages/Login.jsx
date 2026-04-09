@@ -29,16 +29,10 @@ const Login = () => {
           password,
         });
         alert(res.data.message);
+        console.log("LOGIN RESPONCE:", res.data);
 
-        const existingUser = JSON.parse(localStorage.getItem("user")) || {};
-
-        const updatedUser = {
-          ...res.data.user,
-          profileImage: existingUser.profileImage || null,
-        };
-
-        localStorage.setItem("user", JSON.stringify(updatedUser));
-        navigate("/dashboard");
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+        navigate("/dashboard", { replace: true} );
       }
     } catch (error) {
       alert(error.response?.data?.message || "Something went wrong");
