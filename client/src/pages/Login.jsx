@@ -32,8 +32,11 @@ const Login = () => {
         console.log("LOGIN RESPONCE:", res.data);
 
         localStorage.setItem("user", JSON.stringify(res.data.user));
-        navigate("/dashboard", { replace: true} );
-      }
+        setTimeout(() => {
+          navigate("/dashboard", { replace:
+             true });
+      },100);
+    }
     } catch (error) {
       alert(error.response?.data?.message || "Something went wrong");
     }
