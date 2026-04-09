@@ -10,7 +10,9 @@ const app = express(); // ✅ VERY IMPORTANT
 const dns = require("dns");
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 app.use("/api/listings", listingRoutes);
 
