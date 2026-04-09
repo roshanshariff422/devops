@@ -18,7 +18,7 @@ const Profile = () => {
 
     const fetchListings = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/listings");
+        const res = await fetch("https://devops-c5cj.onrender.com/api/listings");
         const data = await res.json();
 
         const myItems = data.filter(

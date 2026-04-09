@@ -10,7 +10,7 @@ const MyListings = () => {
 
   const markAsSold = async (id) => {
     try {
-     await fetch(`http://localhost:5000/api/listings/sold/${id}`, {
+     await fetch(`https://devops-c5cj.onrender.com/api/listings/sold/${id}`, {
   method: "PUT",
   headers: {
     "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const MyListings = () => {
           return;
         }
 
-        const res = await fetch("http://localhost:5000/api/listings");
+        const res = await fetch("https://devops-c5cj.onrender.com/api/listings");
         const data = await res.json();
 
         const myItems = data.filter(

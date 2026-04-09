@@ -17,14 +17,14 @@ const Login = () => {
   const handleSubmit = async () => {
     try {
       if (isSignup) {
-        const res = await axios.post("http://localhost:5000/api/auth/signup", {
+        const res = await axios.post("https://devops-c5cj.onrender.com/api/auth/signup", {
           name,
           email,
           password,
         });
         alert(res.data.message);
       } else {
-        const res = await axios.post("http://localhost:5000/api/auth/login", {
+        const res = await axios.post("https://devops-c5cj.onrender.com/api/auth/login", {
           email,
           password,
         });

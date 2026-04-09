@@ -27,7 +27,7 @@ const BrowseItems = () => {
         return;
       }
 
-      const res = await fetch("http://localhost:5000/api/listings/interest", {
+      const res = await fetch("https://devops-c5cj.onrender.com/api/listings/interest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const BrowseItems = () => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/listings");
+        const res = await fetch("https://devops-c5cj.onrender.com/api/listings");
         const data = await res.json();
 
         setListings(data);

@@ -41,7 +41,7 @@ const Messages = () => {
         if (!user?.email) return;
 
         const res = await fetch(
-          `http://localhost:5000/api/messages/${user.email}`
+          `https://devops-c5cj.onrender.com/api/messages/${user.email}`
         );
         const data = await res.json();
 

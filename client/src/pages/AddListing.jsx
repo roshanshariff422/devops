@@ -20,7 +20,7 @@ const AddListing = () => {
   // 🔥 AI FUNCTION (UPGRADED)
   const getAISuggestion = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/listings/ai-suggest", {
+      const res = await fetch("https://devops-c5cj.onrender.com/api/listings/ai-suggest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const AddListing = () => {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
 
-      const res = await fetch("http://localhost:5000/api/listings/add", {
+      const res = await fetch("https://devops-c5cj.onrender.com/api/listings/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
