@@ -36,8 +36,7 @@ Start exploring listings or post your own items today.
     res.json({ message: "User created & email sent" });
 
   } catch (error) {
-    res.status(500).json(error);
-  }
+console.log("EMAIL ERROR (signup):",err);  }
 };
 
 // LOGIN
